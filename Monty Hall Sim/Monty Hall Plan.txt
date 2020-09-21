@@ -1,0 +1,44 @@
+# Jacob Smith
+# A01476417
+# Assn8
+# Plan for Task2
+
+1. Requirements:
+    Allow user to input switch or no switch
+    Simulate game (with user choice) 100,000 times
+    Print results as percentage (which should be 33.33% for keeping and 66.66% for switching)
+
+2. System Analysis:
+    INPUTS:
+        random number between 1 and 3 for your choice
+        random number between 1 and 3 for computer choice (winning choice)
+        random number between 1 and 3 that != comp rand or user rand
+        whether user will switch
+    OUTPUTS:
+        "Open the door", eliminating one option that is not the winning door
+        Execute user switch or not switch
+        count # of wins
+
+3. System Design:
+    Identify winning number
+        Identify goatsOne
+        Identify goatsTwo
+    Identify user choice number
+    Define switch/not switch conditions
+        user = winner
+        user = goatOne
+        user = goatTwo
+    Count number of times user = winner AFTER switch
+    Divide number of win by 100,000 to calculate percentage
+    print results
+
+4. Implementation:
+
+5. Testing:
+    a. INPUT: 'S'; 'y'
+       OUTPUT: 66.66% winning rate; simulation restarts
+        - This one was tricky. Initially 's' and 'S' would return different values. Once I formatted\
+          he user's input to always be lowercase these issues were resolved
+    b. INPUT: 'k'; no
+       OUTPUT: 33.33%; "Curse you Perry the Platypus!"
+       - Output was correct. The percentage is +-0.2% but I believe that is within the margin of error
